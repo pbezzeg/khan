@@ -28,10 +28,10 @@ ceo_model = "bu0y/glm53flash"
 # all-around with production history, sonnet5 sharpest judgment,
 # gemini37flash near-frontier at ~40% of their price.
 ceo_models = [
-  "bu0y/glm53flash",     # first choice: ~14x cheaper than grok, worker-proven (200+ calls,
+  "openrouter/free",     # first choice: ~14x cheaper than grok, worker-proven (200+ calls,
                          # 0 failures) — a trial in the big seat; grok is the fallback rung,
                          # so benching this reverts the seat without a deploy
-  "bu0y/gpt56luna",      # probed 2026-09-02: tools verified (correct sql call), full
+  "openrouter/free",      # probed 2026-09-02: tools verified (correct sql call), full
                          # vision (named the colour), scam trap refused cleanly, 1.05M
                          # context, and FAST — 10s where glm53flash took 38s on the same
                          # prompt (its 178s and 92s slow-model lines are a daily tax).
@@ -41,10 +41,10 @@ ceo_models = [
                          # that gap in practice and nobody has measured it yet. Still 11x
                          # cheaper than grok46 in, 5.5x out, so it is the cheap escalation
                          # rung grok used to be.
-  "bu0y/grok46",         # best all-around probe result, production-proven
-  "bu0y/claudeopus5",    # picked only when the rungs above are benched AND its band fits
-  "bu0y/claudesonnet5",
-  "bu0y/gemini37flash",
+  "openrouter/free",         # best all-around probe result, production-proven
+  "openrouter/free",    # picked only when the rungs above are benched AND its band fits
+  "openrouter/free",
+  "openrouter/free",
 ]
 # Ceilings in the catalog's per-1M price units (input.average / output.average).
 # Ladder entries above either ceiling are skipped that cycle and picked up
